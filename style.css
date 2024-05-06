@@ -1,0 +1,102 @@
+/* Digite ctrl + ; para comentar rapidamente em css */
+
+*{
+    /* Setar para zero o espaço na margem e usar a fonte importada */
+padding: 0;
+margin: 0;
+font-family: "Ubuntu",sans-serif;
+}
+
+body{
+    background: linear-gradient(90deg,rgb(89, 76, 238), rgb(67, 186, 255), rgb(141, 208, 245), rgb(160, 43, 255));
+    background-size: 5000% 400%;
+    animation: degrade-animado 10s infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura de acordo com o despositivo(vertical height)*/
+}
+
+@keyframes degrade-animado{ /* Efeito de degradê animado*/
+    0%{
+        background-position-x: 0% ;
+    }
+    100%{
+        background-position-x: 100% ;
+    }
+}
+
+.hide{ /* O hide é uma classe que esconde o elemento */
+    display: none;
+}
+
+
+.container{
+    background-color: #5c54ed ; 
+    box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+    padding: 2rem;     /*Espaçamento. O rem é uma unidade de proporção*/
+    color: #fdfdfd;
+    border-radius: 1rem;
+}
+
+/* FORM */
+
+/* .form Manipula-se toda classe form*/
+/* h3.form manipula apenas o h3 com a classe form*/
+/* .form h3 manipula-se apenas o h3 dentro do objeto da classe "form" */
+
+.form h3{ /*Aqui manipula-se todos os h3 dentro da classe form*/
+    margin-bottom: 1rem;
+}
+.form-input-container{
+    display: flex;
+}
+.form input{ /* Aqui, manipulamos apenas os inputs que estão dentro da classe form. Os inputs que estão fora dessa classe, não recebem os estilos.*/
+    padding: .8rem; /* O ponto modifica para 0.8rem*/
+    border: none;
+    flex: 1;
+    border-radius: 4px;
+}
+.form button{
+    padding: .8rem;
+    min-width: 50px; 
+    margin-left: 8px;
+    background-color: #8dd0f5;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* CLIMA */
+
+#weather-data,
+#error-message,
+#loader{
+    border-top: 1px solid #fff; /* Borda de cima*/
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    text-align: center;
+}
+#weather-data h2 i{ /* Aqui há uma ocasião especial. Nessa linha, nós estamos manipulando o elemento "i" dentro do "h2" que por sua vez setá dentro do elemento com id "weather-data".*/
+    font-size: 1rem;
+}
+#weather-data span{
+    margin: 0.6rem; /*Margem total em volta da div*/
+}
+#description-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.6rem;
+}
+#details-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#details-container #umidity{ /* Aqui manipulamos apenas o elemento "umidity" dentro do elemento "details-container"*/
+    border-right: 1px solid #fff;
+    margin: 0.6rem;
+    padding: 0.6rem;
+}

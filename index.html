@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> <!-- defer: executa o script após carregar o html -->
+
+    <!--APIs do Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=Roboto:ital,wght@1,300&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Font awesome(usadas para símbolos e fontes especiais) 
+    A biblioteca cdnjs é um serviço de Rede de Distribuição de Conteúdo (CDN) gratuito e de código aberto. Ela é usada para tornar mais rápido e fácil o carregamento de arquivos de biblioteca em seus sites-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Projeto API Clima</title> 
+<!-- Use ctrl + ';' para comentar rapidamente em html -->
+</head> 
+<body>
+    <div class="container">
+        <div class="form">
+            <h3>Confira o clima de uma cidade</h3>
+
+            <div class="form-input-container">
+                <input type="text" placeholder="Digite o nome da cidade" id="city-input">
+
+                <button id="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="weather-data" class="hide">
+            <h2> 
+                <i class="fa-solid fa-location-dot"></i>
+                <span id="city">Igarassu</span>
+
+                <img 
+                src="https://flagsapi.com/BR/shiny/64.png" 
+                alt="Bandeira do País"
+                id="country"
+                height="25px">
+
+            </h2>
+            <p id="temperature"><span>60</span>&deg;C</p>
+
+            <div id="description-container">
+                <p id="description">Nublado</p>
+
+                <img 
+                src="https://openweathermap.org/img/wn/02d.png" 
+                alt="Condições do tempo" 
+                id="weather-icon">
+
+            </div>
+
+
+            <div id="details-container">
+                <p id="umidity">
+                    <i class="fa-solid fa-droplet"></i>
+                    <span>59%</span>
+                </p>
+                <p id="wind">
+                    <i class="fa-solid fa-wind"></i>
+                    <span>4 km/h</span>
+                </p>
+            </div> 
+        </div>
+
+        <div id="error-message" class="hide">
+            <p>A cidade <span>nome</span> não existe.</p>
+        </div>
+
+        <div id="loader" class="hide">
+            <i class="fa-solid fa-spinner"></i>
+        </div>
+    </div>
+</body>
+</html>
